@@ -1,0 +1,10 @@
+{
+    "partitions": [
+      {
+        "topic": "MSKTutorialTopic",
+        "partition": 0,
+        "offset": 3
+      }
+    ],
+    "version": 1
+  }
