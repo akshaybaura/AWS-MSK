@@ -1,0 +1,10 @@
+{
+    "name": "redshift-sink-custom-plugin",
+    "contentType": "ZIP",
+    "location": {
+        "s3Location": {
+            "bucketArn": "arn:aws:s3:::honest-dataset",
+            "fileKey": "redshift_connect.zip"
+        }
+    }
+}
