@@ -1,0 +1,10 @@
+{
+    "name": "redshift-sink-custom-plugin",
+    "contentType": "ZIP",
+    "location": {
+        "s3Location": {
+            "bucketArn": "**masked**",
+            "fileKey": "**masked**"
+        }
+    }
+}

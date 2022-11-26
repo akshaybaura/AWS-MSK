@@ -1,0 +1,59 @@
+{
+    "connectorName": "honest-test-conn",
+    "kafkaConnectVersion": "2.7.1",
+    "serviceExecutionRoleArn": "**masked**",
+    "plugins": [
+        {
+            "customPlugin": {
+                "customPluginArn": "**masked**",
+                "revision": 1
+            }
+        }
+    ],
+    "capacity": {
+        "provisionedCapacity": {
+            "workerCount": 2,
+            "mcuCount": 1
+        }
+    },
+    "kafkaCluster": {
+        "apacheKafkaCluster": {
+            "bootstrapServers": "**masked**",
+            "vpc": {
+                "subnets": [
+                    "**masked**",
+                    "**masked**",
+                    "**masked**"
+                ]
+            }
+        }
+    },
+    "kafkaClusterClientAuthentication": {"authenticationType": "NONE"},
+    "kafkaClusterEncryptionInTransit": {"encryptionType": "PLAINTEXT"},
+    "logDelivery": {
+        "workerLogDelivery": {
+            "cloudWatchLogs": {
+                "logGroup": "msk-redshift-connector",
+                "enabled": true
+            }
+        }
+    },
+    "connectorConfiguration": {
+        "confluent.topic.bootstrap.servers": "**masked**",
+        "confluent.topic.replication.factor": "1",
+        "connector.class": "io.confluent.connect.aws.redshift.RedshiftSinkConnector",
+        "tasks.max": "2",
+        "topics": "honest_table_test",
+        "aws.redshift.domain": "**masked**",
+        "aws.redshift.port": "**masked**",
+        "aws.redshift.database": "**masked**",
+        "aws.redshift.user": "**masked**",
+        "aws.redshift.password": "**masked**",
+        "pk.mode": "none",
+        "auto.create": "true",
+        "auto.evolve": "true",
+        "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+        "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+        "value.converter.schemas.enable": "true"
+    }
+}
