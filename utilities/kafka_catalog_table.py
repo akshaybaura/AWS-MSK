@@ -3,7 +3,7 @@ import boto3
 client = boto3.client('glue', region_name = 'ap-south-1')
 
 choice = input('enter choice: ')
-table_name = '**masked**'
+table_name = 'honest_table'
 
 if choice == 'create':
     response = client.create_table(
@@ -58,7 +58,7 @@ if choice == 'create':
                         'Comment': ''
                     },
                     {
-                        'Name': 'ma50',
+                        'Name': 'riskscorema50',
                         'Type': 'float',
                         'Comment': ''
                     },
@@ -144,7 +144,7 @@ elif choice=='update':
                         'Comment': ''
                     },
                     {
-                        'Name': 'ma50',
+                        'Name': 'riskscorema50',
                         'Type': 'float',
                         'Comment': ''
                     },
@@ -231,7 +231,7 @@ elif choice=='update2':
                         'Comment': ''
                     },
                     {
-                        'Name': 'ma50',
+                        'Name': 'riskscorema50',
                         'Type': 'float',
                         'Comment': 'updated logic to ema'
                     },

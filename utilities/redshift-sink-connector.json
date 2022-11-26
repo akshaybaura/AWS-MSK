@@ -1,5 +1,5 @@
 {
-    "connectorName": "honest-test-conn",
+    "connectorName": "honest-table-conn",
     "kafkaConnectVersion": "2.7.1",
     "serviceExecutionRoleArn": "**masked**",
     "plugins": [
