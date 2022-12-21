@@ -1,5 +1,3 @@
-# Data Engineering Assessment Test:
-
 ## About the architecture
 
 ![alt text](/images/honest-tasks.jpeg)
